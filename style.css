@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  background-image: linear-gradient(
+    to right,
+    rgba(16, 44, 180, 255),
+    rgba(89, 106, 220, 255)
+  );
+}
+
+.background h3 {
+  font-size: 3rem;
+  margin-bottom: 8.5rem;
+  color: white;
+}
+
+.background div {
+  margin-bottom: 1rem;
+  margin-top: 6.5rem;
+}
+
+.background div p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.background div button {
+  border: none;
+  height: 35px;
+  width: 90px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  margin-top: -30px;
+  box-shadow: 0 -2px 20px;
+}
+
+.main h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.main form {
+  margin: 1rem;
+}
+
+.main .input-group {
+  position: relative;
+}
+
+.main .input {
+  padding: 0 9.5px;
+  height: 3.5rem;
+  width: 20rem;
+  font-size: 14px;
+  display: block;
+  margin: 1rem 0;
+  border: 1px solid rgba(123, 123, 123, 0.6);
+  border-radius: 7px;
+  outline: none;
+}
+
+.placeholder {
+  position: absolute;
+  top: 17px;
+  left: 9px;
+  font-size: 14px;
+  padding: 0 3px;
+  color: #666;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  top: -7px;
+  left: 8px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.main form button {
+  height: 3.5rem;
+  width: 20rem;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  background-image: linear-gradient(
+    to right,
+    rgba(16, 44, 180, 255),
+    rgba(89, 106, 220, 255)
+  );
+  cursor: pointer;
+}
+
+.main .terms {
+  font-size: 90%;
+  width: 20rem;
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 120%;
+}
+
+li {
+  padding: 8px 0;
+}
+
+.main .terms h4 {
+  font-size: 1rem;
+  padding: 8px 0;
+}
+
+.main .alert-primary,
+.alert-danger {
+  height: 3rem;
+  width: 20rem;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.main .alert-primary .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(123, 123, 123, 0.6);
+  background-color: yellowgreen;
+}
+.main .alert-primary .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid rgba(123, 123, 123, 0.6);
+  background-color: white;
+}
+.main .alert-danger .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(123, 123, 123, 0.6);
+  background-color: red;
+  color: white;
+}
+.main .alert-danger .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid rgba(123, 123, 123, 0.6);
+  background-color: white;
+}
+
+.telegram {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  height: 50px;
+  width: 150px;
+}
+
+.telegram button {
+  height: 50px;
+  width: 150px;
+  position: fixed;
+  bottom: 30px;
+  background-image: linear-gradient(to right, #2aabee, #229ed9);
+  color: white;
+  border: 0.5px solid;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.telegram button a {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.telegram button::after {
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translateX(100%);
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  animation: slide 1s infinite;
+
+  /* CSS Gradient */
+
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgba(255, 255, 255, 0)),
+    color-stop(50%, rgba(255, 255, 255, 0.8)),
+    color-stop(99%, rgba(128, 186, 232, 0)),
+    color-stop(100%, rgba(125, 185, 232, 0))
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(128, 186, 232, 0) 99%,
+    rgba(125, 185, 232, 0) 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
